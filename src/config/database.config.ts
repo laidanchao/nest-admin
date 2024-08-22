@@ -2,6 +2,8 @@ import { ConfigType, registerAs } from '@nestjs/config'
 
 import { DataSource, DataSourceOptions } from 'typeorm'
 
+import { SnakeNamingStrategy } from 'typeorm-naming-strategies'
+
 import { env, envBoolean, envNumber } from '~/global/env'
 
 // eslint-disable-next-line import/order
@@ -25,6 +27,7 @@ const dataSourceOptions: DataSourceOptions = {
   entities: ['dist/modules/**/*.entity{.ts,.js}'],
   migrations: ['dist/migrations/*{.ts,.js}'],
   subscribers: ['dist/modules/**/*.subscriber{.ts,.js}'],
+  namingStrategy: new SnakeNamingStrategy(),
 }
 export const dbRegToken = 'database'
 

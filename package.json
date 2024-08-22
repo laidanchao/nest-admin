@@ -30,7 +30,7 @@
     "gen-env-types": "npx tsx scripts/genEnvTypes.ts || true",
     "typeorm": "cross-env NODE_ENV=development typeorm-ts-node-esm -d ./dist/config/database.config.js",
     "migration:create": "npm run typeorm migration:create ./src/migrations/initData",
-    "migration:generate": "npm run typeorm migration:generate ./src/migrations/update-table_$(echo $npm_package_version | sed 's/\\./_/g')",
+    "migration:generate": "npm run typeorm migration:generate ./src/migrations/update-table",
     "migration:run": "npm run typeorm -- migration:run",
     "migration:revert": "npm run typeorm -- migration:revert",
     "cleanlog": "rimraf logs",
@@ -101,6 +101,7 @@
     "systeminformation": "^5.22.10",
     "ts-node": "^10.9.2",
     "typeorm": "0.3.17",
+    "typeorm-naming-strategies": "^4.1.0",
     "ua-parser-js": "^1.0.38",
     "winston": "^3.13.0",
     "winston-daily-rotate-file": "^5.0.0"

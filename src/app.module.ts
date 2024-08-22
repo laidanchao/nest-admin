@@ -25,6 +25,7 @@ import { SystemModule } from './modules/system/system.module'
 import { TasksModule } from './modules/tasks/tasks.module'
 import { TodoModule } from './modules/todo/todo.module'
 import { ToolsModule } from './modules/tools/tools.module'
+import { WmsModule } from './modules/wms/wms.module'
 import { DatabaseModule } from './shared/database/database.module'
 
 import { SocketModule } from './socket/socket.module'
@@ -75,7 +76,7 @@ import { SocketModule } from './socket/socket.module'
     NetdiskModule,
 
     // biz
-
+    WmsModule,
     // end biz
 
     TodoModule,
